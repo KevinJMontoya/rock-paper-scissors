@@ -24,12 +24,11 @@ document.querySelectorAll(".choice").forEach(img => {
 function updateUI(humanChoice, computerChoice, result) {
     document.getElementById("result").textContent = result;
     document.getElementById("scores").textContent = `${str3} ${humanScore} | ${str2} ${computerScore}`;
-
     document.getElementById("display-choices").innerHTML = `
-        <img src="images/${humanChoice}.png" alt="${humanChoice}" class="icon">
+    
+        <img src="images/${humanChoice}.png" width="300px"alt="${humanChoice}" class="icon">
         <span>${str1}</span>
-        <img src="images/${computerChoice}.png" alt="${computerChoice}" class="icon">
-    `;
+        <img src="images/${computerChoice}.png" width="300px" alt="${computerChoice}" class="icon">`;
 
     if (computerScore >= 5 || humanScore >= 5) {
         document.getElementById("result").textContent = `Game Over! ${humanScore > computerScore ? "You Win!" : "Computer Wins!"}`;
